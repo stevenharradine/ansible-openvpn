@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: "Steven Harradine"
+  categories:
+    - security
+    - networking
+  company: "TELUS digital"
+  description: "OpenVPN compiled from source"
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+    - name: Ubuntu
+      versions:
+        - lucid
+        - precise
+        - trusty
+        - utopic
