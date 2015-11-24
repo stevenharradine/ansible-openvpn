@@ -1,13 +1,4 @@
 ---
-- name: change hostname
-  hostname:
-    name: "{{ hostname }}"
-
-- name: update hosts
-  lineinfile:
-    dest: /etc/hosts
-    line: "127.0.1.1       {{ hostname }}"
-
 - name: install software | apt
   apt:
     pkg: "{{ item }}"
