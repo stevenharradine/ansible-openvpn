@@ -8,7 +8,7 @@
     - openvpn
     - easy-rsa
 
-- name: foward client traffic to internet
+- name: forward client traffic to internet
   shell: echo 1 > /proc/sys/net/ipv4/ip_forward
 
 - name: update confs
