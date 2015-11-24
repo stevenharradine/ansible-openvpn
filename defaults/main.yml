@@ -1,2 +1,3 @@
 ---
-hostname: OpenVPN
+openvpn_port: 1194
+openvpn_key_size: 4096
