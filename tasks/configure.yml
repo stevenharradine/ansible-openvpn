@@ -5,12 +5,12 @@
 - name: update confs
   template:
     src: "{{ item }}"
-    dest: "{{ item }}"
+    dest: "/etc/{{ item }}"
   with_items:
-    - /etc/openvpn/ca.crt
-    - /etc/openvpn/df.pem
-    - /etc/openvpn/server.conf
-    - /etc/sysctl.conf
+    - openvpn/ca.crt
+    - openvpn/df.pem
+    - openvpn/server.conf
+    - sysctl.conf
 
 
 - name: update confs (restricted permissions)
