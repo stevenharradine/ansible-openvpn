@@ -4,7 +4,7 @@
 
 - name: update confs
   template:
-    src: "templates{{ item }}"
+    src: "{{ item }}"
     dest: "{{ item }}"
   with_items:
     - /etc/openvpn/ca.crt
@@ -15,7 +15,7 @@
 
 - name: update confs (restricted permissions)
   template:
-    src: "templates{{ item }}"
+    src: "{{ item }}"
     dest: "{{ item }}"
     mode: 0600
   with_items:
