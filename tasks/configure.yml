@@ -7,8 +7,20 @@
     src: "templates{{ item }}"
     dest: "{{ item }}"
   with_items:
+    - /etc/openvpn/ca.crt
+    - /etc/openvpn/df.pem
     - /etc/openvpn/server.conf
     - /etc/sysctl.conf
+
+
+- name: update confs (restricted permissions)
+  template:
+    src: "templates{{ item }}"
+    dest: "{{ item }}"
+    mode: 0600
+  with_items:
+    - /etc/openvpn/ipp.txt
+    - /etc/openvpn/server.key
 
 - name: ufw allow ssh
   ufw:
