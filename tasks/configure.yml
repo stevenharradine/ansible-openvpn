@@ -34,11 +34,11 @@
 
 - name: update confs
   template:
-    src: "templates{{ item }}"
-    dest: "{{ item }}"
+    src: "{{ item }}"
+    dest: "/{{ item }}"
   with_items:
-    - /etc/default/ufw
-    - /etc/ufw/before.rules
+    - etc/default/ufw
+    - etc/ufw/before.rules
 
 - name: enable ufw
   sudo_user: root
