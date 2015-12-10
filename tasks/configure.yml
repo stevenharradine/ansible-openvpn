@@ -8,7 +8,7 @@
     dest: "/{{ item }}"
   with_items:
     - etc/openvpn/ca.crt
-    - etc/openvpn/df.pem
+    - etc/openvpn/dh.pem
     - etc/openvpn/server.conf
     - etc/sysctl.conf
 
