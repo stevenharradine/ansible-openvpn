@@ -15,11 +15,11 @@
 - name: update confs (restricted permissions)
   template:
     src: "{{ item }}"
-    dest: "{{ item }}"
+    dest: "/{{ item }}"
     mode: 0600
   with_items:
-    - /etc/openvpn/ipp.txt
-    - /etc/openvpn/server.key
+    - etc/openvpn/ipp.txt
+    - etc/openvpn/server.key
 
 - name: ufw allow ssh
   ufw:
