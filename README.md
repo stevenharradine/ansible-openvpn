@@ -11,6 +11,8 @@ tar -xf openvpn-2.3.8.tar.xz
 
 cd openvpn-2.3.8/
 
+sudo apt-get install libssl-dev
+
 ./configure
 
 Tunables
