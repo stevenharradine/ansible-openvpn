@@ -1,3 +1,10 @@
 ---
 openvpn_port: 1194
 openvpn_key_size: 4096
+
+openvpn_compile_from_source: yes
+openvpn_compile_from_source_filename: openvpn-2.3.8
+openvpn_compile_from_source_filename_extention: tar.xz
+openvpn_compile_from_remote_local: "https://swupdate.openvpn.org/community/releases/{{ openvpn_compile_from_source_filename }}.{{ openvpn_compile_from_source_filename_extention }}"
+openvpn_compile_from_source_local_destination_compressed: "/tmp/openvpn.{{ openvpn_compile_from_source_filename_extention }}"
+openvpn_compile_from_source_local_destination: "/tmp/openvpn/"
