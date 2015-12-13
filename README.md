@@ -16,6 +16,10 @@ sudo apt-get install libssl-dev liblzo2-dev libpam0g-dev
 
 ./configure
 
+make
+
+sudo make install
+
 Tunables
 --------
 * `hostname` (string) - The hostname to set on the server
