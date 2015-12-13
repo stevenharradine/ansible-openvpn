@@ -1,28 +1,13 @@
-# ansible-autodeploy
-
-Simple deployment tool with hooks 
+# ansible-ppenvpn
+[Ansible](http://www.ansible.com/) role to install openvpn from source with TLS1.2 enabled
 
 [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
 
-TODO: install from source for TLS1.2 support
-
-wget https://swupdate.openvpn.org/community/releases/openvpn-2.3.8.tar.xz
-
-tar -xf openvpn-2.3.8.tar.xz
-
-cd openvpn-2.3.8/
-
-sudo apt-get install libssl-dev liblzo2-dev libpam0g-dev
-
-./configure
-
-make
-
-sudo make install
-
 Tunables
 --------
-* `hostname` (string) - The hostname to set on the server
+* `openvpn_port` (integer) - port to listen on
+* `openvpn_key_size` (integer) - rsa key size to be used
+* `openvpn_compile_from_source` (boolean) - should we compile and build openvpn from source or use?  If no you will install from the outdated repo that does not support TLS1.2
 
 Dependencies
 ------------
