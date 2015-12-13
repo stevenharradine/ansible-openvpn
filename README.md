@@ -1,7 +1,9 @@
 # ansible-openvpn
 [Ansible](http://www.ansible.com/) role to install openvpn from source with TLS1.2 enabled
 
-[![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
+[![Licence](https://img.shields.io/badge/Licence-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![Role](https://img.shields.io/ansible/role/6393.svg)](https://galaxy.ansible.com/detail#/role/6269)
+[![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg)](#)
 
 Tunables
 --------
