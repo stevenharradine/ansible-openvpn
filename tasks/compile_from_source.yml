@@ -9,7 +9,7 @@
     - liblzo2-dev
     - libpam0g-dev
 
-- name: downloud source code
+- name: download source code
   get_url:
     url: "{{ openvpn_compile_from_remote_local }}"
     dest: "{{ openvpn_compile_from_source_local_destination_compressed }}"
