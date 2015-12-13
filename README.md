@@ -1,4 +1,4 @@
-# ansible-ppenvpn
+# ansible-openvpn
 [Ansible](http://www.ansible.com/) role to install openvpn from source with TLS1.2 enabled
 
 [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
