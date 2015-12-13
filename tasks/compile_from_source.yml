@@ -23,4 +23,4 @@
     dest: "{{ openvpn_compile_from_source_local_destination }}"
 
 - name: configure and make
-  shell: "cd {{ openvpn_compile_from_source_local_destination }} && ./configure && make && sudo make install"
+  shell: "cd {{ openvpn_compile_from_source_local_destination }}/{{ openvpn_compile_from_source_filename }} && ./configure && make && sudo make install"
