@@ -10,7 +10,7 @@
     - libpam0g-dev
 
 - name: download source code
-  shell: "cd {{ openvpn_compile_from_source_working_directory }} && wget {{ openvpn_compile_from_remote_local }}"
+  shell: "cd {{ openvpn_compile_from_source_working_directory }} && wget {{ openvpn_compile_from_remote_local }} --output-document={{ openvpn_compile_from_source_local_destination_compressed }}"
 
 - name: uncompress source code
   unarchive:
