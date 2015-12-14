@@ -10,6 +10,7 @@
     - etc/openvpn/ca.crt
     - etc/openvpn/dh.pem
     - etc/openvpn/server.conf
+    - etc/openvpn/server.crt
     - etc/sysctl.conf
 
 - name: update confs (restricted permissions)
