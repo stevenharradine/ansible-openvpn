@@ -10,6 +10,7 @@ Tunables
 * `openvpn_port` (integer) - port to listen on
 * `openvpn_key_size` (integer) - rsa key size to be used
 * `openvpn_compile_from_source` (boolean) - should we compile and build openvpn from source?  If no you will install from the outdated repo that does not support TLS1.2
+* `openvpn_firewall_enabled` (boolean) - use UFW to harden this installation?  Only disable if you know what your doing and have a firewall upstream.
 
 Dependencies
 ------------

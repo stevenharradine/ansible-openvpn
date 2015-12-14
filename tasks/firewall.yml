@@ -1,0 +1,24 @@
+---
+- name: ufw allow ssh
+  ufw:
+    rule: allow
+    name: OpenSSH
+
+- name: ufw allow OpenVPN
+  ufw:
+    rule: allow
+    port: 1194
+    proto: udp
+
+- name: update confs
+  template:
+    src: "{{ item }}"
+    dest: "/{{ item }}"
+  with_items:
+    - etc/default/ufw
+    - etc/ufw/before.rules
+
+- name: enable ufw
+  sudo_user: root
+  ufw:
+    state: enabled
