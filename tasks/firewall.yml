@@ -21,4 +21,5 @@
 
 - name: enable ufw
   sudo_user: root
-  shell: "ufw enable"
+  ufw:
+    state: enabled
