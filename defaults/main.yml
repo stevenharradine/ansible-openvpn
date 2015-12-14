@@ -11,3 +11,4 @@ openvpn_compile_from_source_local_destination_compressed: "{{ openvpn_compile_fr
 openvpn_compile_from_source_local_destination: "{{ openvpn_compile_from_source_working_directory }}/openvpn/"
 
 openvpn_firewall_enabled: yes
+openvpn_firewall_allow_ssh: no

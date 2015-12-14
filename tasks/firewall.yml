@@ -3,6 +3,7 @@
   ufw:
     rule: allow
     name: OpenSSH
+  when: openvpn_firewall_allow_ssh
 
 - name: ufw allow OpenVPN
   ufw:
@@ -20,5 +21,4 @@
 
 - name: enable ufw
   sudo_user: root
-  ufw:
-    state: enabled
+  shell: "ufw enable"
