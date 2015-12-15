@@ -30,7 +30,7 @@
   cron:
     name: "start openvpn on boot"
     special_time: reboot
-    job: "cd /ect/openvpn && openvpn server.conf"
+    job: "cd /etc/openvpn && openvpn server.conf"
 
 - name: include firewall
   include: firewall.yml
