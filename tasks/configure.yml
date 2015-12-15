@@ -26,6 +26,12 @@
   sudo_user: root
   shell: iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o TUN0 -j MASQUERADE
 
+- name: start openvpn on boot
+  cron:
+    name: "start openvpn on boot"
+    special_time: reboot
+    job: "cd /ect/openvpn && openvpn server.conf"
+
 - name: include firewall
   include: firewall.yml
   when: openvpn_firewall_enabled
