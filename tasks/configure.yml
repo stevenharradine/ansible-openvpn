@@ -22,10 +22,10 @@
     - etc/openvpn/ipp.txt
     - etc/openvpn/server.key
 
-- name: include firewall
-  include: firewall.yml
-  when: openvpn_firewall_enabled
-
 - name: bridge vpn to local ethernet
   sudo_user: root
   shell: iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o TUN0 -j MASQUERADE
+
+- name: include firewall
+  include: firewall.yml
+  when: openvpn_firewall_enabled
