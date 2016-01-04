@@ -11,7 +11,7 @@
 
 - name: update configuration (restricted permissions)
   template:
-    src: "{{ item }}"
+    src: "../../templates/{{ item }}"
     dest: "/{{ item }}"
     mode: 0600
   with_items:
