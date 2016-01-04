@@ -10,20 +10,20 @@
     - libpam0g-dev
 
 - name: download source code
-  shell: "cd {{ openvpn_compile_from_source_working_directory }} && wget {{ openvpn_compile_from_remote_local }} --output-document={{ openvpn_compile_from_source_local_destination_compressed }}"
+  shell: "cd {{ openvpn_server_compile_from_source_working_directory }} && wget {{ openvpn_server_compile_from_remote_local }} --output-document={{ openvpn_server_compile_from_source_local_destination_compressed }}"
 
 - name: make openvpn folder in working directory
   file:
     state: directory
-    path: "{{ openvpn_compile_from_source_working_directory }}/openvpn"
+    path: "{{ openvpn_server_compile_from_source_working_directory }}/openvpn"
 
 - name: uncompress source code
   unarchive:
-    src: "{{ openvpn_compile_from_source_local_destination_compressed }}"
-    dest: "{{ openvpn_compile_from_source_local_destination }}"
+    src: "{{ openvpn_server_compile_from_source_local_destination_compressed }}"
+    dest: "{{ openvpn_server_compile_from_source_local_destination }}"
 
 - name: configure and make
-  shell: "cd {{ openvpn_compile_from_source_local_destination }}/{{ openvpn_compile_from_source_filename }} && ./configure && make && sudo make install"
+  shell: "cd {{ openvpn_server_compile_from_source_local_destination }}/{{ openvpn_server_compile_from_source_filename }} && ./configure && make && sudo make install"
 
 - name: make openvpn folder in /etc
   file:

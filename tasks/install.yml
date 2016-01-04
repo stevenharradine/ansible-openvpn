@@ -7,7 +7,7 @@
   with_items:
     - openvpn
     - easy-rsa
-  when: not openvpn_compile_from_source
+  when: not openvpn_server_compile_from_source
 
 - include: compile_from_source.yml
-  when: openvpn_compile_from_source
+  when: openvpn_server_compile_from_source

@@ -1,1 +1,1 @@
-{{ openvpn_ifconfig_pool_persist }}
+{{ openvpn_server_ifconfig_pool_persist }}

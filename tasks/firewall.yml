@@ -3,7 +3,7 @@
   ufw:
     rule: allow
     name: OpenSSH
-  when: openvpn_firewall_allow_ssh
+  when: openvpn_server_firewall_allow_ssh
 
 - name: ufw allow OpenVPN
   ufw:

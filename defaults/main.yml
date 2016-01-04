@@ -1,14 +1,14 @@
 ---
-openvpn_port: 1194
-openvpn_key_size: 4096
+openvpn_server_port: 1194
+openvpn_server_key_size: 4096
 
-openvpn_compile_from_source: yes
-openvpn_compile_from_source_filename: openvpn-2.3.8
-openvpn_compile_from_source_filename_extention: tar.xz
-openvpn_compile_from_remote_local: "https://swupdate.openvpn.org/community/releases/{{ openvpn_compile_from_source_filename }}.{{ openvpn_compile_from_source_filename_extention }}"
-openvpn_compile_from_source_working_directory: /tmp
-openvpn_compile_from_source_local_destination_compressed: "{{ openvpn_compile_from_source_working_directory }}/openvpn.{{ openvpn_compile_from_source_filename_extention }}"
-openvpn_compile_from_source_local_destination: "{{ openvpn_compile_from_source_working_directory }}/openvpn/"
+openvpn_server_compile_from_source: yes
+openvpn_server_compile_from_source_filename: openvpn-2.3.8
+openvpn_server_compile_from_source_filename_extention: tar.xz
+openvpn_server_compile_from_remote_local: "https://swupdate.openvpn.org/community/releases/{{ openvpn_compile_from_source_filename }}.{{ openvpn_compile_from_source_filename_extention }}"
+openvpn_server_compile_from_source_working_directory: /tmp
+openvpn_server_compile_from_source_local_destination_compressed: "{{ openvpn_compile_from_source_working_directory }}/openvpn.{{ openvpn_compile_from_source_filename_extention }}"
+openvpn_server_compile_from_source_local_destination: "{{ openvpn_compile_from_source_working_directory }}/openvpn/"
 
-openvpn_firewall_enabled: yes
-openvpn_firewall_allow_ssh: no
+openvpn_server_firewall_enabled: yes
+openvpn_server_firewall_allow_ssh: no
