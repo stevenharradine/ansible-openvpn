@@ -1,3 +1,6 @@
 ---
-- include: install.yml
-- include: configure.yml
+- include: server/main.yml
+  when: openvpn_server
+
+- include: client/main.yml
+  when: openvpn_client
