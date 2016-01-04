@@ -8,6 +8,7 @@
     - etc/openvpn/dh.pem
     - etc/openvpn/server.conf
     - etc/openvpn/server.crt
+  notify: OpenVPN restart
 
 - name: update configuration (restricted permissions)
   template:
@@ -16,3 +17,4 @@
     mode: 0600
   with_items:
     - etc/openvpn/server.key
+  notify: OpenVPN restart
