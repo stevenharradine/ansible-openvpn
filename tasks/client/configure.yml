@@ -1,7 +1,7 @@
 ---
 - name: update configuration
   template:
-    src: "../../templates/{{ item }}"
+    src: "../templates/{{ item }}"
     dest: "/{{ item }}"
   with_items:
     - etc/openvpn/ca.crt
