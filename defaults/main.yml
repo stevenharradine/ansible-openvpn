@@ -4,6 +4,10 @@ openvpn_server: no
 
 openvpn_server_port: 1194
 
+openvpn_server_logging: yes
+openvpn_server_log_path: /var/log/openvpn.log
+openvpn_server_log_verbosity: 4
+
 openvpn_server_firewall_enabled: yes
 openvpn_server_firewall_allow_ssh: no
 openvpn_server_firewall_allow_dns: yes
