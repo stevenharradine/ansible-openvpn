@@ -27,7 +27,14 @@
     - etc/default/ufw
     - etc/ufw/before.rules
 
-- name: enable ufw
+- name: enable ufw (will fail bug in ufw)
   sudo_user: root
   ufw:
     state: enabled
+  ignore_errors: yes
+
+- name: check ufw is enabled (should pass)
+  sudo_user: root
+  ufw:
+    state: enabled
+
