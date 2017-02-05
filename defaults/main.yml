@@ -15,3 +15,6 @@ openvpn_server_compile_from_source_local_destination: "{{ openvpn_compile_from_s
 
 openvpn_server_firewall_enabled: yes
 openvpn_server_firewall_allow_ssh: no
+openvpn_server_firewall_allow_dns: yes
+
+openvpn_server_firewall_dns_gateway: 192.168.2.1

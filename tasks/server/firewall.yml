@@ -5,6 +5,14 @@
     name: OpenSSH
   when: openvpn_server_firewall_allow_ssh
 
+- name: ufw allow dns lookups
+  ufw:
+    rule: allow
+    from_ip: "{{ openvpn_server_firewall_dns_gateway }}"
+    from_port: 53
+    name: DNS
+  when: openvpn_server_firewall_allow_dns
+
 - name: ufw allow OpenVPN
   ufw:
     rule: allow

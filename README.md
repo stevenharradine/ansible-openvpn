@@ -12,6 +12,8 @@ Tunables
 * `openvpn_server_compile_from_source` (boolean) - should we compile and build openvpn from source?  If no you will install from the outdated repo that does not support TLS1.2
 * `openvpn_server_firewall_enabled` (boolean) - use UFW to harden this installation?  Only disable if you know what your doing and have a firewall upstream.
 * `openvpn_server_firewall_allow_ssh` (boolean) - allow ssh connections to this box?  Disabled by default, if you dont have physical access to the box and need remote connections its probally safe to enable.
+* `openvpn_server_firewall_allow_dns` (boolean) - allow DNS requests through the firewall
+* `openvpn_server_firewall_dns_gateway` (boolean) - your networks gateway (where the dns requests will be routed from)
 
 Dependencies
 ------------
