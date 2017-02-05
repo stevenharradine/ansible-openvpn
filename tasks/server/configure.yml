@@ -34,4 +34,4 @@
 
 - name: include firewall
   include: firewall.yml
-  when: openvpn_firewall_enabled
+  when: openvpn_server_firewall_enabled
