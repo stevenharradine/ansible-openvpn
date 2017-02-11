@@ -7,3 +7,12 @@
   with_items:
     - openvpn
     - easy-rsa
+
+- name: push clients to get a native network ip (fixes DNS)
+  iptables:
+    table: nat
+    action: append
+    chain: POSTROUTING
+    source: 10.8.0.0/24
+    out_interface: enp0s3
+    jump: MASQUERADE
